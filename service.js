@@ -7,7 +7,6 @@ Lungo.ready(function() {
 var idUsu = null;
 var keyUsu = null;
 
-
 //Login User
 $$('#aLogin').tap(function() {
     var user = Lungo.dom('#username').val();
@@ -28,7 +27,6 @@ $$('#aLogin').tap(function() {
 
             var user = {id: idUsu, name: name, email: email, key: keyUsu};
             Lungo.Data.Storage.persistent("user", user);
-
 
             // Si todo fue correcto cargamos la seccion principal, usando Router
             Lungo.Router.section("main");
