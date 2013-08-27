@@ -55,13 +55,13 @@
     <!--*****************************Bienvenida********************************************-->
     <section id="first" data-transition="slide">
         <article class="indented splash">
-            <img src="img/logo.png">
             <form>
+                <div><img src="img/logo.png"></div><br/>
                 <input id="username" type="text" placeholder="Email" required />
                 <input id="password" type="password" placeholder="Contraseña" required />
                 <a href="#" id="aLogin" class="button blue big" data-icon="user" data-label="Entrar"></a>
             </form>
-            <a href="#registro" id="aRegistro" class="button blue" data-router="section" data-icon="plus" data-label="Regístrate"></a>
+            <a href="#registro" id="aRegistro" style="margin-top: -10px;" class="button blue" data-router="section" data-label="Regístrate"></a>
         </article>
     </section>
 
@@ -81,7 +81,7 @@
                 <fieldset data-icon="lock">
                     <input type="password" id="pass" placeholder="Contraseña" required />
                 </fieldset>
-                <a href="#" id="aEnviarRegistro" class="button blue" data-icon="plus" data-label="Crear"></a>
+                <a href="#" id="aEnviarRegistro" class="button blue" data-label="Sing Up"></a>
             </form>
         </article>
     </section>
@@ -98,12 +98,16 @@
         <article id="home" class="list indented scroll">
             <ul>
                 <li class="thumb selectable arrow" id="searchLi" data-image="img/trago.png"  >
-                    <strong>Rumba y Restaurantes</strong>
-                    <small>Encuentra la fiesta y donde comer</small>
+                    <strong>Rumba</strong>
+                    <small>Encuentra la fiesta</small>
+                </li>
+                <li class="thumb selectable arrow" id="searchLi" data-image="img/resaturante.png"  >
+                    <strong>Restaurantes</strong>
+                    <small>¿Tienes Hambre?</small>
                 </li>
                 <li id="taxi" class="thumb selectable arrow" data-image="img/mevoy.png">
-                    <strong>Me voy</strong>
-                    <small>En que te vas?</small>
+                    <strong>Conductor</strong>
+                    <small>¿En que te vas?</small>
                 </li>
                 <li class="thumb selectable arrow" id="panic" data-image="img/emergencia.png">
                     <strong>Boton de panico</strong>
@@ -115,36 +119,16 @@
         <footer>
             <nav>
                 <a href="#home" data-router="article" class="current" data-icon="home" data-title="Home"></a>
-                <a href="#art-2" data-router="article" data-icon="search" data-title="Buscar"></a>
-                <a id="reco" href="#art-3" data-router="article" data-icon="info" data-title="Recomendaciones"></a>
+                <a href="#art-2" data-router="article" data-icon="bell" data-title="Boton Panico"></a>
+                <a id="#reco" href="#art-3" data-router="article" data-icon="info" data-title="Recomendaciones"></a>
                 <a href="#art-4" data-router="article" data-icon="settings" data-title="Configuracion"></a>
             </nav>
         </footer>
         
         <article id="art-2">
             <center>
-            	<form>
-                    <input type="text" placeholder="Buscar" />
-                </form>
-                <a href="#resultados"  data-router="section" class="button blue big">Buscar</a>
-            </center>       
-        </article>
-
-        <article id="art-3" class="active indented list scroll">
-            <ul>
-                <li>
-                    <strong>Toma con calma</strong>
-                    <small>No hay apuro, ¿o si?</small>
-                </li>
-                <li>
-                    <strong>Ojo con tus pertenecias</strong>
-                    <small>Nunca pierdas de vista tus pertenecias, tus cosas de valor.</small>
-                </li>
-                <li>
-                    <strong>No excedas</strong>
-                    <small>No tomes de mas, controla lo que consumas.</small>
-                </li>
-            </ul>
+            <img src="img/panico.png">
+            </center>
         </article>
 
         <article id="art-4" class="list indented scroll">
@@ -164,7 +148,7 @@
                 <ul>
                     <li class="thumb selectable">
                         <a id="aRest" href="#rest" data-router="section" data-icon="pushpin"></a>
-                        <strong>Restaurantes</strong>
+                        <strong>Disco Y Bares</strong>
                         <small>Buscar Restaurante</small>
                     </li>
                     <li class="thumb selectable">
@@ -191,7 +175,7 @@
             </div>
         </article>
     </section>
-    <!--**********************Resultados_Discostecas TRucupey**********************************************-->
+    <!--**********************Resultados_Discostecas TRucupey************************************-->
     <section id="Trucupey" data-transition="slide" class="extended">
         <header data-back="left" data-title="Trucupey"></header>
         <article class="list indented scroll">
