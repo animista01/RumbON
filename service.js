@@ -184,3 +184,31 @@ $$('article#listaresultipo ul li').tap(function() {
         }
     });
 }); 
+
+$$('#liAsideConfigUser').tap(function() {
+    usuId = userStored['id'];
+    /*
+    var url = "http://rumbon.gopagoda.com/api/clubytype/"+tipo;
+
+    var parseResponse = function(result){
+        template ='<ul>{{#datos}}\
+                     <li class="thumb selectable" id="{{id}}">\
+                        <div class="right">{{telephone}} - {{address}}</div>\
+                        <img src="http://rumbon.gopagoda.com/uploads/thumbnails/clubs/{{image}}" />\
+                        <strong>{{name}}</strong>\
+                        <small>{{description}}</small>\
+                    </li>\
+                    {{/datos}}\
+                    {{^datos}}\
+                    <li class="thumb">\
+                        <strong>No hay discoteca por este tipo</strong>\
+                        <small>:(</small>\
+                    </li>\
+                    {{/datos}}</ul>';
+        html = Mustache.render(template,result);
+        $$('#art-configUser').html(html); //Aqui es donde se 'pintaría' los datos que estamos consumiendo en JSON
+        Lungo.Router.section('sect-configUser');
+    }
+    var result = Lungo.Service.get(url, "", parseResponse, "json");
+    */
+});

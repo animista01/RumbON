@@ -20,22 +20,17 @@ $$('#bar').tap(function() {
 
 $$('#taxi').tap(function() {
 	Lungo.Notification.confirm({
-	    icon: 'user',
+	    icon: 'warning-sign',
 	    title: 'Ya te vas?',
-	    description: 'Opciones',
 	    accept: {
-	        icon: 'checkmark',
-	        label: 'Carro Propio',
+	        label: 'Conductor',
 	        callback: function(){ 
-	        	Lungo.Router.article("seVaSect","soloArt");
+	        	Lungo.Router.section("sect-seVa");
 	    	}
 	    },
 	    cancel: {
 	        icon: 'close',
-	        label: 'Pedir Taxi',
-	        callback: function(){
-	        	Lungo.Router.article("seVaSect","taxiArt");
-	        }
+	        label: 'Cancelar'
 	    }
 	});
 });
