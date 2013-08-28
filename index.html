@@ -88,10 +88,10 @@
     <section id="main" data-transition="slide" >
         <header data-title="Home" class="extended">
             <nav class="left box">
-                <a href="#" id="aLogout" data-router="section" data-icon="signout"></a>
+                <a href="#features" data-router="aside" data-icon="menu"></a>
             </nav>
-            <nav class="right">
-                <a href="#second" data-router="section" data-icon="comment"></a>
+            <nav class="right box">
+                <a href="#" id="aLogout" data-router="section" data-icon="signout"></a>
             </nav>
         </header>
         <article id="home" class="list indented scroll">
@@ -108,10 +108,6 @@
                     <strong>Conductor</strong>
                     <small>¿En que te vas?</small>
                 </li>
-                <li class="thumb selectable arrow" id="panic" data-image="img/emergencia.png">
-                    <strong>Boton de panico</strong>
-                    <small>En caso de cualquier succeso</small>
-                </li>
             </ul>
         </article>
 
@@ -119,25 +115,37 @@
             <nav>
                 <a href="#home" data-router="article" class="current" data-icon="home"></a>
                 <a href="#art-2" data-router="article" data-icon="bell"></a>
-                <a id="#reco" href="#art-3" data-router="article" data-icon="info-sign"></a>
-                <a href="#art-4" data-router="article" data-icon="cog"></a>
+                <a href="#second" data-router="section" data-icon="comment"></a>
             </nav>
         </footer>
         
         <article id="art-2">
             <center>
-            <img src="img/panico.png">
+                <br>
+                <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flungo.tapquo.com%2F&amp;text=@RumbON_Club Me encuentro en:" target="_blank"><img src="img/panico.png"></a>           
             </center>
         </article>
-
-        <article id="art-4" class="list indented scroll">
-                <ul>
-                    <li class="selectable" id="configPanic">
-                        <a href="#ConfigSect"  data-router="section">Boton de Panico</a>
-                    </li>
-                </ul>
-        </article>
     </section>
+
+    <aside id="features">
+        <header data-title="Opciones"></header>
+        <article class="active list">
+            <ul>
+                <li class="current" data-icon="user" id="liAsideConfigUser">
+                    <a href="#">
+                        <strong>Usuario</strong>
+                        <small>Editar Mi Cuenta</small>
+                    </a>
+                </li>
+                <li data-icon="warning-sign" id="liAsideConfigPanic">
+                    <a href="#ConfigSect" data-router="section">
+                        <strong>Panico</strong>
+                        <small>Boton de panico</small>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </aside>
 
     <!--**********************Section de la opc de las Discotecas************************************-->
     <section id="sect-Clubs" data-transition="slide" class="extended">
@@ -215,7 +223,6 @@
                 <a href="#home" data-router="article" class="current" data-icon="home" data-title="Home"></a>
                 <a href="#art-2" data-router="article" data-icon="search" data-title="Buscar"></a>
                 <a id="reco" href="#art-5" data-router="article" data-icon="info" data-title="Recomendaciones"></a>
-                <a href="#art-4" data-router="article" data-icon="settings" data-title="Configuracion"></a>
             </nav>
         </footer>
         <article id="art-5" class="list indented scroll"></article>
@@ -244,7 +251,7 @@
     <section id="mapa" data-transition="slide">
         <header data-back="chevron-left" data-title="Como llegar"></header>
         <article class="list indented scroll">
-        	<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps/ms?msa=0&amp;msid=204518939830781667095.0004dac3430855265dbd1&amp;ie=UTF8&amp;t=m&amp;ll=10.990328,-74.788806&amp;spn=0.005266,0.003422&amp;z=17&amp;output=embed"></iframe><br />
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps/ms?msa=0&amp;msid=204518939830781667095.0004dac3430855265dbd1&amp;ie=UTF8&amp;t=m&amp;ll=10.990328,-74.788806&amp;spn=0.005266,0.003422&amp;z=17&amp;output=embed"></iframe><br />
         </article>
     </section>
  <!--********************************recomendados*****************************************-->
@@ -253,7 +260,7 @@
         <article class="list indented scroll">
             <div>
                 <ul>
-                	<li class="thumb selectable" data-icon="star" data-image="img/tru.png">
+                    <li class="thumb selectable" data-icon="star" data-image="img/tru.png">
                         <a href="#Trucupey" data-router="section"></a>
                         <strong>Trucupey</strong>
                         <small>617, Me gusta</small>
@@ -278,7 +285,7 @@
         <article class="list indented scroll">
             <div>
                 <ul>
-                	<li class="thumb selectable" data-icon="heart" >
+                    <li class="thumb selectable" data-icon="heart" >
                         <a href="#Trucupey" data-router="section"></a>
                         <strong>Precios Fexibles</strong>
                         <small>Lo mejor para tu bolsillo</small>
@@ -390,33 +397,8 @@
             </ul>
         </article>
     </section>
-
-    <section id="seVaSect" data-transition="slide">
-        <header data-back="chevron-left" data-title="Opciones"></header>
-        <article id="taxiArt" class="list indented scroll">
-            <h1>Taxi de Confianza</h1>
-            <ul>
-                <li class="thumb selectable" data-image="http://4.bp.blogspot.com/-_gWgypoIsuM/TjF5k9GSqfI/AAAAAAAABEQ/-pVyirMTSrk/s1600/Piemonte-Taxistas-11.jpg">
-                    <div class="right bubble orange">20 Carreras</div>
-                    <strong>Eduardo</strong>
-                    <small>A su disposicion</small>
-                </li>
-                <li class="thumb selectable" data-image="http://www.taxista.us/sindicato/images/stories/fotos/taxistas7.gif">
-                     <div class="right bubble orange">10 Carreras</div>
-                    <strong>Marco</strong>
-                    <small>A su servicio</small>
-                </li>
-                <li class="thumb selectable" data-image="http://diarioadn.co/polopoly_fs/1.25187.1348666857!/image/image.jpg_gen/derivatives/p2-1d679x340/image.jpg">
-                     <div class="right bubble orange">7 Carreras</div>
-                    <strong>Carlos</strong>
-                    <small>Servicio Publico</small>
-                </li>
-                <li class="thumb selectable" data-image="http://www.tax-individual.com.co/wp-content/uploads/2011/12/taxistas2.jpg"><div class="right bubble orange">5 Carreras</div>
-                    <strong>Mario</strong>
-                    <small>A su disposicion</small>
-                </li>
-            </ul>
-        </article>
+    <section id="sect-seVa" data-transition="cover">
+        <header data-back="chevron-left" data-title="Conductor"></header>
         <article id="soloArt" class="list indented scroll">
             <h1>Carro Propio</h1>
              <ul>
@@ -425,7 +407,7 @@
                     <small>Puedes pedir que alguien de tu lista de confianza
                      para que venga por ti</small>
                 </li>
-				<li class="selectable" id="liAmigo" data-icon="plus">
+                <li class="selectable" id="liAmigo" data-icon="plus">
                     <strong>Sura</strong>
                     <small>Pide tu conductor en tu aseguradora</small>
                 </li>
@@ -437,8 +419,15 @@
             </ul>
         </article>
     </section>  
+    <!--Configuracion de Usuario-->
+    <section id="sect-configUser" data-transition="cover">
+        <header data-back="chevron-left" data-title="Conductor"></header>
+        <article id="art-configUser" class="list indented scroll">
+            
+        </article>
+    </section>
     <!--***************************Bryan boton panico****************************************-->
-    <section id="ConfigSect" data-transition="slide">
+    <section id="ConfigSect" data-transition="cover">
         <header data-back="chevron-left" data-title="Configuracion Boton Panico"></header>
         <article id="FormConfigPanic">
             <form>
@@ -476,4 +465,4 @@
         });
     </script>
 </body>
-</html>		
+</html>     
