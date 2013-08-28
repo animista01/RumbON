@@ -47,7 +47,6 @@
     <!-- Lungo - Stylesheets -->
     <link rel="stylesheet" href="components/lungo/lungo.css">
     <link rel="stylesheet" href="components/lungo/lungo.icon.css">
-    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
     <link rel="stylesheet" href="components/lungo/lungo.theme.default.css">
 </head>
 
@@ -66,7 +65,7 @@
     </section>
 
     <section id="registro" data-transition="slide">
-        <header data-back="left" data-title="Unete :)"></header>
+        <header data-back="chevron-left" data-title="Unete :)"></header>
         <article class="indented splash">
             <form>
                 <fieldset data-icon="user">
@@ -89,19 +88,19 @@
     <section id="main" data-transition="slide" >
         <header data-title="Home" class="extended">
             <nav class="left box">
-                <a href="#" id="aLogout" data-router="section" data-label="Logout"></a>
+                <a href="#" id="aLogout" data-router="section" data-icon="signout"></a>
             </nav>
             <nav class="right">
-                <a href="#second" data-router="section" data-icon="chat"></a>
+                <a href="#second" data-router="section" data-icon="comment"></a>
             </nav>
         </header>
         <article id="home" class="list indented scroll">
             <ul>
-                <li class="thumb selectable arrow" id="searchLi" data-image="img/trago.png"  >
+                <li class="thumb selectable arrow" id="listClubs" data-image="img/trago.png"  >
                     <strong>Rumba</strong>
                     <small>Encuentra la fiesta</small>
                 </li>
-                <li class="thumb selectable arrow" id="searchLi" data-image="img/resaturante.png"  >
+                <li class="thumb selectable arrow" id="listRest" data-image="img/resaturante.png"  >
                     <strong>Restaurantes</strong>
                     <small>¿Tienes Hambre?</small>
                 </li>
@@ -118,10 +117,10 @@
 
         <footer>
             <nav>
-                <a href="#home" data-router="article" class="current" data-icon="home" data-title="Home"></a>
-                <a href="#art-2" data-router="article" data-icon="bell" data-title="Boton Panico"></a>
-                <a id="#reco" href="#art-3" data-router="article" data-icon="info" data-title="Recomendaciones"></a>
-                <a href="#art-4" data-router="article" data-icon="settings" data-title="Configuracion"></a>
+                <a href="#home" data-router="article" class="current" data-icon="home"></a>
+                <a href="#art-2" data-router="article" data-icon="bell"></a>
+                <a id="#reco" href="#art-3" data-router="article" data-icon="info-sign"></a>
+                <a href="#art-4" data-router="article" data-icon="cog"></a>
             </nav>
         </footer>
         
@@ -139,108 +138,68 @@
                 </ul>
         </article>
     </section>
- 
-    <!--************************Buscar************************************************-->    
-    <section id="buscar" data-transition="slide" class="extended">
-        <header data-back="home" data-title="Buscar"></header>
-        <article class="list indented scroll">
-            <div>
-                <ul>
-                    <li class="thumb selectable">
-                        <a id="aRest" href="#rest" data-router="section" data-icon="pushpin"></a>
-                        <strong>Disco Y Bares</strong>
-                        <small>Buscar Restaurante</small>
-                    </li>
-                    <li class="thumb selectable">
-                        <a href="#generos" data-router="section" data-icon="music"></a>
-                        <strong>Generos</strong>
-                        <small>Busca por generos musicales</small>
-                    </li>
-                    <li class="thumb selectable">
-                        <a href="#amigos" data-router="section" data-icon="users"></a>
-                        <strong>Amigos</strong>
-                        <small>Visita los lugares de amigos</small>
-                    </li>
-                    <li class="thumb selectable">
-                        <a href="#recomendados" data-router="section" data-icon="thumbs-up"></a>
-                        <strong>Recomendados</strong>
-                        <small>Por las redes sociales</small>
-                    </li>
-                    <li class="thumb selectable">
-                        <a href="#Precios" data-router="section" data-icon="bars"></a>
-                        <strong>Precios</strong>
-                        <small>Buscar por precios</small>
-                    </li>
-                </ul>
-            </div>
+
+    <!--**********************Section de la opc de las Discotecas************************************-->
+    <section id="sect-Clubs" data-transition="slide" class="extended">
+        <header data-back="chevron-left" data-title="Discotecas"></header>
+        <article class="list indented scroll" id="art-Clubs">
+            <li class="thumb selectable" id="liGeneros">
+                <a data-icon="music"></a>
+                <strong>Generos</strong>
+                <small>Busca por generos musicales</small>
+            </li>
+            <li class="thumb selectable" id="liAmigos">
+                <a data-icon="group"></a>
+                <strong>Amigos</strong>
+                <small>Visita los lugares de amigos</small>
+            </li>
+            <li class="thumb selectable" id="liRecomen">
+                <a data-icon="thumbs-up"></a>
+                <strong>Recomendados</strong>
+                <small>Por las redes sociales</small>
+            </li>
+            <li class="thumb selectable" id="liPrecios">
+                <a data-icon="bar-chart"></a>
+                <strong>Precios</strong>
+                <small>Buscar por precios</small>
+            </li>
         </article>
     </section>
-    <!--**********************Resultados_Discostecas TRucupey************************************-->
-    <section id="Trucupey" data-transition="slide" class="extended">
-        <header data-back="left" data-title="Trucupey"></header>
-        <article class="list indented scroll">
-            <div>
-                <ul>
-                    <li class="thumb selectable" >
-                        <strong><a href="#mapa" data-router="section" data-label="Como llegar" data-icon="map"></a></strong>
-                        <small>Quiero ir ya.!</small>
-                    </li>
-                    <li class="thumb selectable" >
-                        <strong><a href="#" data-router="section" data-label="Precios" data-icon="ticket"></a></strong>
-                        <small>$</small>
-                    </li>
-                    <li class="thumb selectable" id="bar" >
-                        <strong><a href="#id="bar"" data-router="section" data-label="Chat de la disco" data-icon="chat"></a></strong>
-                        <small>Divierte con todos</small>
-                    </li>
-                    <li class="thumb selectable" >
-                        <strong><a href="#reservar" data-router="section" data-label="Reservar" data-icon="cart"></a></strong>
-                        <small>Compra tu cover</small>
-                    </li>
-                </ul>
-            </div>
-            <fieldset>
-                <label>Fotos</label>
-            </fieldset>
-            <ul class=" four row scroll anchor">
-                <img src="http://lorempixel.com/256/128/food/">
-                <img src="http://lorempixel.com/256/128/sports/">
-                <img src="http://lorempixel.com/256/128/people/">
-                <img src="http://lorempixel.com/256/128/technics/">
-                <img src="http://lorempixel.com/256/128/animals/">
-                <img src="http://lorempixel.com/256/128/nightlife/">
-                <img src="http://lorempixel.com/256/128/nature/">
-                <img src="http://lorempixel.com/256/128/transport/">
-                <img src="http://lorempixel.com/256/128/city/">
-                <img src="http://lorempixel.com/256/128/fashion/">
-                <img src="http://lorempixel.com/256/128/abstract/">
-            </ul>
+    <!--**********************Section de la lista de los restaurantes abiertos************************************-->
+    <section id="sect-Rest" data-transition="slide" class="extended">
+        <header data-back="chevron-left" data-title="Abiertos"></header>
+        <article class="list indented scroll" id="art-Rest"> 
         </article>
     </section>
     <!--*************************GENEROS************************************************-->
     <section id="generos" data-transition="slide">
-        <header data-back="left" data-title="Encuentra tu estilo"></header>
+        <header data-back="chevron-left" data-title="Encuentra tu estilo"></header>
         <article>
             <div class="list indented scroll">
                 <ul>
-                    <li class="thumb selectable">
-                        <strong><a href="#resulxgenero" id="tipoclub" name="Salsa" data-router="section" data-label="Salsa" data-icon="music"></a></strong>
+                    <li id="tipoclub" class="thumb selectable">
+                        <a href="#" name="Salsa" data-icon="music"></a>
+                        <strong>Salsa</strong>
                         <small>Busca por Salsa</small>
                     </li>
-                    <li class="thumb selectable">
-                        <strong><a href="#resulxgenero" id="tipoclub" name="Crossover" data-router="section" data-label="Crossover" data-icon="music"></a></strong>
+                    <li id="tipoclub" class="thumb selectable">
+                        <a href="#" name="Crossover" data-icon="music"></a>
+                        <strong>Crossover</strong>
                         <small>Busca por Crossover</small>
                     </li>
-                    <li class="thumb selectable">
-                        <strong><a href="#resulxgenero" id="tipoclub" name="Reggaeton" data-router="section" data-label="Reggaeton" data-icon="music"></a></strong>
+                    <li id="tipoclub" class="thumb selectable">
+                        <a href="#" name="Reggaeton" data-icon="music"></a>
+                        <strong>Reggaeton</strong>
                         <small>Busca por Reggaeton</small>
                     </li>
-                    <li class="thumb selectable">
-                        <strong><a href="#resulxgenero" id="tipoclub" name="Vallenato" data-router="section" data-label="Vallenato" data-icon="music"></a></strong>
+                    <li id="tipoclub" class="thumb selectable">
+                        <a href="#" name="Vallenato" data-icon="music"></a>
+                        <strong>Vallenato</strong>
                         <small>Busca por Vallenato</small>
                     </li>
-                    <li class="thumb selectable">
-                        <strong><a href="#resulxgenero" id="tipoclub" name="Karaoke" data-router="section" data-label="Karaoke" data-icon="music"></a></strong>
+                    <li id="tipoclub" class="thumb selectable">
+                        <a href="#" name="Karaoke" data-icon="music"></a>
+                        <strong>Karaoke</strong>
                         <small>Busca por Karaoke</small>
                     </li>
                 </ul>
@@ -249,9 +208,8 @@
     </section>
     <!-- Resultado de la busqueda por tipo -->
     <section id="resulxgenero" data-transition="slide">
-        <header data-back="left" data-title="Discotecas"></header>
-        <article id="listaresultipo" class="list indented scroll">
-        </article>
+        <header data-back="chevron-left" data-title="Discotecas"></header>
+        <article id="listaresultipo" class="list indented scroll"></article>
         <footer>
             <nav>
                 <a href="#home" data-router="article" class="current" data-icon="home" data-title="Home"></a>
@@ -260,22 +218,22 @@
                 <a href="#art-4" data-router="article" data-icon="settings" data-title="Configuracion"></a>
             </nav>
         </footer>
-
-        <article id="art-5" class="list indented scroll">
-        </article>
+        <article id="art-5" class="list indented scroll"></article>
     </section>
     <!--***********************Recomendacion por Amigos**************************************************-->
     <section id="amigos" data-transition="slide">
-        <header data-back="left" data-title="Tus Amigos Fueron a:"></header>
+        <header data-back="chevron-left" data-title="Tus Amigos Fueron a:"></header>
         <article class="list indented scroll">
             <div>
                 <ul>
                     <li class="thumb selectable" data-image="img/agua.png">
-                        <strong><a href="#agua" data-router="section" data-label="Agua Helada" ></a></strong>
+                        <a href="#agua" data-router="section"></a>
+                        <strong>Agua Helada</strong>
                         <small>Jeffer Ariza, estubo aqui</small>
                     </li>
                     <li class="thumb selectable" data-image="img/tru.png">
-                        <strong><a href="#Trucupey" data-router="section" data-label="Trucupey" ></a></strong>
+                        <a href="#Trucupey" data-router="section"></a>
+                        <strong>Trucupey</strong>
                         <small>Bryan Villafañe, estubo aqui</small>
                     </li>                    
                 </ul>
@@ -284,27 +242,30 @@
     </section>
     <!--***************************Mapa-tru**********************************************-->
     <section id="mapa" data-transition="slide">
-        <header data-back="left" data-title="Como llegar"></header>
+        <header data-back="chevron-left" data-title="Como llegar"></header>
         <article class="list indented scroll">
         	<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps/ms?msa=0&amp;msid=204518939830781667095.0004dac3430855265dbd1&amp;ie=UTF8&amp;t=m&amp;ll=10.990328,-74.788806&amp;spn=0.005266,0.003422&amp;z=17&amp;output=embed"></iframe><br />
         </article>
     </section>
  <!--********************************recomendados*****************************************-->
     <section id="recomendados" data-transition="slide">
-        <header data-back="left" data-title="Los mas sociales"></header>
+        <header data-back="chevron-left" data-title="Los mas sociales"></header>
         <article class="list indented scroll">
             <div>
                 <ul>
-                	<li class="thumb selectable" data-icon="star-full" data-image="img/tru.png">
-                        <strong><a href="#Trucupey" data-router="section" data-label="Trucupey" ></a></strong>
+                	<li class="thumb selectable" data-icon="star" data-image="img/tru.png">
+                        <a href="#Trucupey" data-router="section"></a>
+                        <strong>Trucupey</strong>
                         <small>617, Me gusta</small>
                     </li>
-                    <li class="thumb selectable" data-icon="star" data-image="img/agua.png">
-                        <strong><a href="#agua" data-router="section" data-label="Agua Helada" ></a></strong>
+                    <li class="thumb selectable" data-icon="star-half" data-image="img/agua.png">
+                        <a href="#agua" data-router="section" data-label="Agua Helada"></a>
+                        <strong></strong>
                         <small>256, Me gusta</small>
                     </li>
-                    <li class="thumb selectable"data-icon="star" data-image="img/troja.png">
-                        <strong><a href="#agua" data-router="section" data-label="La troja" ></a></strong>
+                    <li class="thumb selectable"data-icon="star-half" data-image="img/troja.png">
+                        <a href="#agua" data-router="section"></a>
+                        <strong>La troja</strong>
                         <small>213, Me gusta</small>
                     </li> 
                 </ul>
@@ -313,48 +274,48 @@
     </section>
     <!--**************************Precios***********************************************-->  
     <section id="Precios" data-transition="slide">
-        <header data-back="left" data-title="Cuanto quieres gastar?"></header>
+        <header data-back="chevron-left" data-title="Cuanto quieres gastar?"></header>
         <article class="list indented scroll">
             <div>
                 <ul>
                 	<li class="thumb selectable" data-icon="heart" >
-                        <strong><a href="#Trucupey" data-router="section" data-label="Precios Fexibles" ></a></strong>
+                        <a href="#Trucupey" data-router="section"></a>
+                        <strong>Precios Fexibles</strong>
                         <small>Lo mejor para tu bolsillo</small>
                     </li>
-                    <li class="thumb selectable" data-icon="heart-full" >
-                        <strong><a href="#agua" data-router="section" data-label="Precios Comodos" ></a></strong>
+                    <li class="thumb selectable" data-icon="heart-empty" >
+                        <a href="#agua" data-router="section"></a>
+                        <strong>Precios Comodos</strong>
                         <small>Comodidad insuperable</small>
                     </li>
-                    <li class="thumb selectable"data-icon="vcard" >
-                        <strong><a href="#agua" data-router="section" data-label="Precios Esclusivos"></a></strong>
+                    <li class="thumb selectable"data-icon="credit-card" >
+                        <a href="#agua" data-router="section"></a>
+                        <strong>Precios Exclusivos</strong>
                         <small>Perfecto para ti</small>
                     </li>
                 </ul>
             </div>
         </article>
     </section>
-    <!--**************************Buscar Restaurantes***********************************************-->  
-    <section id="rest" data-transition="slide">
-        <header data-back="left" data-title="Restaurantes"></header>
-            <article id="listaRest" class="list indented scroll">
-            </article>       
-    </section>
     <!--*************************reservar************************************************-->
     <section id="reservar" data-transition="slide">
-        <header data-back="left" data-title="Reservar"></header>
+        <header data-back="chevron-left" data-title="Reservar"></header>
         <article id="res">
             <div  class="list indented scroll">
                 <ul>
                     <li class="thumb selectable" id="telefono">
-                        <strong><a href="#" data-router="section" data-label="Contactar" data-icon="phone"></a></strong>
+                        <a href="#" data-router="section" data-icon="phone"></a>
+                        <strong>Contactar</strong>
                         <small>Información</small>
                     </li>
                     <li class="thumb selectable">
-                        <strong><a href="#eventos" data-router="section" data-label="Eventos" data-icon="calendar"></a></strong>
+                        <a href="#eventos" data-router="section" data-icon="calendar"></a>
+                        <strong>Eventos</strong>
                         <small>Reserva tus eventos ya</small>
                     </li>
                     <li class="thumb selectable">
-                        <strong><a href="#" data-router="section" data-label="Forma de Pago" data-icon="vcard"></a></strong>
+                        <a href="#" data-router="section" data-icon="vcard"></a>
+                        <strong>Forma de Pago</strong>
                         <small>Configura tu pago</small>
                     </li>
                 </ul>
@@ -363,28 +324,33 @@
     </section> 
     <!-- *************Eventos******************************* -->
     <section id="eventos" data-transition="slide">
-        <header data-back="left" data-title="Proximos Eventos"></header>
+        <header data-back="chevron-left" data-title="Proximos Eventos"></header>
         <article id="res">
             <div  class="list indented scroll">
                 <ul>
                     <li class="thumb selectable" id="comprar">
-                        <strong><a href="#comprar"  data-label="28 Abr. Happy hours" data-icon="calendar"></a></strong>
+                        <a href="#comprar" data-icon="calendar"></a>
+                        <strong>28 Abr. Happy hours</strong>
                         <small>Quiero Ir</small>
                     </li>
                     <li class="thumb selectable" id="comprar">
-                        <strong><a href="#comprar"  data-label="29 Abr. Cover 2X1" data-icon="calendar"></a></strong>
+                        <a href="#comprar" data-icon="calendar"></a>
+                        <strong>29 Abr. Cover 2X1</strong>
                         <small>Quiero Ir</small>
                     </li>
                     <li class="thumb selectable" id="comprar">
-                        <strong><a href="#comprar"  data-label="4 May. Don Omar" data-icon="calendar"></a></strong>
+                        <a href="#comprar" data-icon="calendar"></a>
+                        <strong>4 May. Don Omar</strong>
                         <small>Quiero Ir</small>
                     </li>
                     <li class="thumb selectable" id="comprar">
-                        <strong><a href="#comprar" data-label="5 May. Solos y Solas" data-icon="calendar"></a></strong>
+                        <a href="#comprar" data-icon="calendar"></a>
+                        <strong>5 May. Solos y Solas</strong>
                         <small>Quiero Ir</small>
                     </li>
                     <li class="thumb selectable" id="comprar">
-                        <strong><a href="#comprar"  data-label="11 May. Piter Majares" data-icon="calendar"></a></strong>
+                        <a href="#comprar" data-icon="calendar"></a>
+                        <strong>11 May. Piter Majares</strong>
                         <small>Quiero Ir</small>
                     </li>
                 </ul>
@@ -393,7 +359,7 @@
     </section> 
     <!--****************BRYAN************************************-->  
     <section id="second" data-transition="cover">
-        <header data-back="left" data-title="Chat"></header>
+        <header data-back="chevron-left" data-title="Chat"></header>
         <article id="chat" class="list indented scroll">
             <ul>
                 <li class="thumb selectable" data-image="https://si0.twimg.com/profile_images/3212320104/ca2f76de785fce7bace5805f6e6d4d1e.png">
@@ -407,7 +373,7 @@
                     <small>Me gusta esta Rumba</small>
                 </li>
                 <li class="thumb selectable" data-image="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/c36.158.363.363/s160x160/303507_4181823024915_1626196883_n.jpg">
-                     <div class="right bubble orange">10 min</div>
+                    <div class="right bubble orange">10 min</div>
                     <strong>Jeffer</strong>
                     <small>Aburrido nadie habla</small>
                 </li>
@@ -426,7 +392,7 @@
     </section>
 
     <section id="seVaSect" data-transition="slide">
-        <header data-back="home" data-title="Opciones"></header>
+        <header data-back="chevron-left" data-title="Opciones"></header>
         <article id="taxiArt" class="list indented scroll">
             <h1>Taxi de Confianza</h1>
             <ul>
@@ -454,7 +420,7 @@
         <article id="soloArt" class="list indented scroll">
             <h1>Carro Propio</h1>
              <ul>
-                <li class="selectable" id="liAmigo" data-icon="users">
+                <li class="selectable" id="liAmigo" data-icon="group">
                     <strong>Amigo o Familiar</strong>
                     <small>Puedes pedir que alguien de tu lista de confianza
                      para que venga por ti</small>
@@ -473,7 +439,7 @@
     </section>  
     <!--***************************Bryan boton panico****************************************-->
     <section id="ConfigSect" data-transition="slide">
-        <header data-back="left" data-title="Configuracion Boton Panico"></header>
+        <header data-back="chevron-left" data-title="Configuracion Boton Panico"></header>
         <article id="FormConfigPanic">
             <form>
                 <br />
@@ -486,7 +452,7 @@
     
     <!--***************************Bryan (Chat)**********************************************--> 
     <section id="ChatSect" data-transition="slide">
-        <header data-back="home" data-title="Chat"></header>
+        <header data-back="chevron-left" data-title="Chat"></header>
         <article id="FormChatadmin">
             <form>
                 <br />
@@ -495,10 +461,8 @@
                 <a href="#main" data-router="section" class="button blue big" data-icon="chat" data-label="Enviar"></a>
             </form>
        </article>
-    </section>
-    <!--***************************Bryan**********************************************-->      
+    </section>   
     <!-- Lungo - Dependencies -->
-    <script src="cordova.js"></script>    
     <script src="components/quojs/quo.js"></script>
     <script src="components/lungo/lungo.js"></script>
     <script src="mustache.js"></script>

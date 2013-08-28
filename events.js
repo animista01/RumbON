@@ -18,9 +18,6 @@ $$('#bar').tap(function() {
 	});
 });
 
-$$('#searchLi').tap(function() {
-	Lungo.Router.section('buscar');
-});
 $$('#taxi').tap(function() {
 	Lungo.Notification.confirm({
 	    icon: 'user',
@@ -107,4 +104,19 @@ $$('#configPanic').tap(function() {
 
 $$('#chatAdmin').tap(function() {
 	Lungo.Router.article("ChatSect","FormChatadmin");
+});
+$$('#listClubs').tap(function() {
+	Lungo.Router.section("sect-Clubs");
+});
+$$('#liGeneros').tap(function() {
+	Lungo.Router.section("generos");
+});
+$$('#liAmigos').tap(function() {
+	Lungo.Router.section("amigos");
+});
+$$('#liRecomen').tap(function() {
+	Lungo.Router.section("recomendados");
+});
+$$('#liPrecios').tap(function() {
+	Lungo.Router.section("Precios");
 });
