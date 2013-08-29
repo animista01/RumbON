@@ -187,28 +187,26 @@ $$('article#listaresultipo ul li').tap(function() {
 
 $$('#liAsideConfigUser').tap(function() {
     usuId = userStored['id'];
-    /*
-    var url = "http://rumbon.gopagoda.com/api/clubytype/"+tipo;
-
+    //var url = "http://rumbon.gopagoda.com/api/get_user_info/"+usuId;
+    var url = "http://localhost/DiscoTK/public/api/userinfo";
+    var data = {id: usuId};
     var parseResponse = function(result){
-        template ='<ul>{{#datos}}\
-                     <li class="thumb selectable" id="{{id}}">\
-                        <div class="right">{{telephone}} - {{address}}</div>\
-                        <img src="http://rumbon.gopagoda.com/uploads/thumbnails/clubs/{{image}}" />\
-                        <strong>{{name}}</strong>\
-                        <small>{{description}}</small>\
-                    </li>\
-                    {{/datos}}\
-                    {{^datos}}\
-                    <li class="thumb">\
-                        <strong>No hay discoteca por este tipo</strong>\
-                        <small>:(</small>\
-                    </li>\
-                    {{/datos}}</ul>';
+        template =  '<form>{{#datos}}\
+                        <fieldset>\
+                            <label>Nombre:</label>\
+                            <input class="inputForm" type="text" value="{{name}}"/>\
+                        </fieldset>\
+                        <fieldset>\
+                            <label>Telefono:</label>\
+                            <input class="inputForm" type="tel" value="{{telephone}}"/>\
+                        </fieldset>\
+                        <a href="#" id="aSaveChanges" class="button blue">\
+                            <span class="icon ok"></span>\
+                        Guardar</a>\
+                    {{/datos}}</form>';
         html = Mustache.render(template,result);
         $$('#art-configUser').html(html); //Aqui es donde se 'pintaría' los datos que estamos consumiendo en JSON
-        Lungo.Router.section('sect-configUser');
     }
-    var result = Lungo.Service.get(url, "", parseResponse, "json");
-    */
+    var result = Lungo.Service.post(url, data, parseResponse, "json");
+
 });

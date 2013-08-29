@@ -71,8 +71,8 @@
                 <fieldset data-icon="user">
                     <input type="text" id="name" placeholder="Nombre Completo" required />
                 </fieldset>
-                <fieldset data-icon="mail">
-                    <input type="text" id="email" placeholder="E-mail" required />
+                <fieldset data-icon="envelope">
+                    <input type="email" id="email" placeholder="E-mail" required />
                 </fieldset>
                 <fieldset data-icon="phone">
                     <input type="tel" id="telephone" placeholder="Telefono" required />
@@ -131,8 +131,8 @@
         <header data-title="Opciones"></header>
         <article class="active list">
             <ul>
-                <li class="current" data-icon="user" id="liAsideConfigUser">
-                    <a href="#">
+                <li data-icon="user" id="liAsideConfigUser">
+                    <a href="#sect-configUser" data-router="section">
                         <strong>Usuario</strong>
                         <small>Editar Mi Cuenta</small>
                     </a>
@@ -422,8 +422,7 @@
     <!--Configuracion de Usuario-->
     <section id="sect-configUser" data-transition="cover">
         <header data-back="chevron-left" data-title="Conductor"></header>
-        <article id="art-configUser" class="list indented scroll">
-            
+        <article id="art-configUser" class="indented splash">
         </article>
     </section>
     <!--***************************Bryan boton panico****************************************-->

@@ -10,6 +10,19 @@
   background: #000;
   font-family: Helvetica, Arial, sans-serif;
 }
+form{
+  text-align: center;
+}
+fieldset{
+  padding: 8px 8px 0 8px;
+}
+.inputForm{
+  border: none;
+  color: #3498db;
+  height: 30px;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
 .theme,
 li.theme,
 a.theme {
