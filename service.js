@@ -96,6 +96,7 @@ $$('#aEnviarRegistro').tap(function() {
 
 //Traer todas los restaurantes que este abiertos cuando le da tap en restaurantes
 $$('#listRest').tap(function() {
+    Lungo.Notification.html('<h1>Cargando... :)</h1>');
     var template,html;
     var url = "http://rumbon.gopagoda.com/api/restaurantbystatu";
     var parseResponse = function(result){
@@ -112,12 +113,14 @@ $$('#listRest').tap(function() {
         html = Mustache.render(template,result);
         $$('#art-Rest').html(html); //Aqui es donde se 'pintaría' los datos que estamos consumiendo en JSON
         Lungo.Router.section('sect-Rest');
+        Lungo.Notification.hide();
     }
     var result = Lungo.Service.get(url, "", parseResponse, "json");
 });
 
 //Buscar Club por tipo
 $$('#tipoclub').tap(function() {
+    Lungo.Notification.html('<h1>Cargando... :)</h1>', "Close");
     var template,html;
     var tipos = Lungo.dom(this.children[0].name);
     tipo = tipos['selector']; 
@@ -141,6 +144,7 @@ $$('#tipoclub').tap(function() {
         html = Mustache.render(template,result);
         $$('#listaresultipo').html(html); //Aqui es donde se 'pintaría' los datos que estamos consumiendo en JSON
         Lungo.Router.section('resulxgenero');
+        Lungo.Notification.hide();
     }
     var result = Lungo.Service.get(url, "", parseResponse, "json");
 }); 
@@ -187,8 +191,7 @@ $$('article#listaresultipo ul li').tap(function() {
 
 $$('#liAsideConfigUser').tap(function() {
     usuId = userStored['id'];
-    //var url = "http://rumbon.gopagoda.com/api/get_user_info/"+usuId;
-    var url = "http://localhost/DiscoTK/public/api/userinfo";
+    var url = "http://rumbon.gopagoda.com/api/userinfo";
     var data = {id: usuId};
     var parseResponse = function(result){
         template =  '<form>{{#datos}}\
