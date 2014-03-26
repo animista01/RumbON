@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.phonegap.example"
+    id        = "com.phonegap.build"
     version   = "1.0.0">
 
-<name>PhoneGap Build Application</name>
+<name>RumbON</name>
 
 <description>
-A simple PhoneGap Build application.
+App for go to party
 </description>
 
+<preference name="orientation" value="portrait" />
+<preference name="stay-in-webview" value="true" />
+
+<access origin="*" subdomains="true" />
+
 <author href="https://example.com" email="you@example.com">
-Your Name
+Bryan
 </author>
 
 </widget>
