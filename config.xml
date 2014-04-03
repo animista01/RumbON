@@ -13,8 +13,6 @@ App for go to party
 <preference name="orientation" value="portrait" />
 <preference name="stay-in-webview" value="true" />
 
-<access origin="*" subdomains="true" />
-
 <author href="https://example.com" email="you@example.com">
 Bryan
 </author>
